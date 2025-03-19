@@ -289,32 +289,24 @@ ul {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-.project-card:nth-child(1) {
-    background: url('../images/thumbs/01.jpg') center/cover no-repeat;
+.project-traffic {
+    background: url('../images/thumbs/traffic_sign_detection.jpg') center/cover no-repeat;
 }
 
-.project-card:nth-child(2) {
-    background: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+.project-credit {
+    background: url('../images/thumbs/credit_card_delinquency.jpg') center/cover no-repeat;
 }
 
-.project-card:nth-child(3) {
-    background: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+.project-reddit {
+    background: url('../images/thumbs/subreddit_classifier.jpg') center/cover no-repeat;
 }
 
-.project-card:nth-child(4) {
-    background: url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2073&q=80') center/cover no-repeat;
+.project-hotdog {
+    background: url('../images/thumbs/hotdog.jpg') center/cover no-repeat;
 }
 
-.project-card:nth-child(5) {
-    background: url('../images/thumbs/05.jpg') center/cover no-repeat;
-}
-
-.project-card:nth-child(6) {
-    background: url('../images/thumbs/06.jpg') center/cover no-repeat;
-}
-
-.project-card:nth-child(7) {
-    background: url('../images/thumbs/08.jpg') center/cover no-repeat;
+.project-libre {
+    background: url('../images/thumbs/libre_chatbot.jpg') center/cover no-repeat;
 }
 
 .card-content {
@@ -340,10 +332,16 @@ ul {
 .project-card a {
     color: white;
     font-size: 17px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover a {
+    opacity: 1;
 }
 
 .project-card a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Skills section */
