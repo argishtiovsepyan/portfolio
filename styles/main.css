@@ -64,7 +64,7 @@ ul {
 .apple-logo {
     color: white;
     font-size: 18px;
-    margin-right: 30px;
+    margin-right: 57px;
 }
 
 .desktop-nav {
@@ -503,6 +503,17 @@ ul {
 @media (max-width: 868px) {
     .desktop-nav {
         display: none;
+    }
+    
+    /* Position the circular arrow all the way to the left on mobile */
+    .nav-container {
+        justify-content: flex-start;
+    }
+    
+    .apple-logo {
+        margin-left: 0;
+        position: absolute;
+        left: 22px;
     }
     
     /* All cards stack on mobile */
