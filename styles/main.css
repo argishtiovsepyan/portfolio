@@ -3,12 +3,12 @@
 
 :root {
     /* Color scheme */
-    --theme-black: #1d1d1f;
-    --theme-white: #f5f5f7;
-    --theme-gray: #86868b;
-    --theme-light-gray: #d2d2d7;
-    --theme-blue: #0066cc;
-    --theme-dark-blue: #0055b3;
+    --argo-black: #1d1d1f;
+    --argo-white: #f5f5f7;
+    --argo-gray: #86868b;
+    --argo-light-gray: #d2d2d7;
+    --argo-blue: #0066cc;
+    --argo-dark-blue: #0055b3;
     --header-height: 44px;
 }
 
@@ -21,18 +21,18 @@
 body {
     font-family: 'SF Pro Display', system-ui, -system-ui, BlinkMacSystemFont, sans-serif;
     line-height: 1.5;
-    color: var(--theme-black);
-    background-color: var(--theme-white);
+    color: var(--argo-black);
+    background-color: var(--argo-white);
 }
 
 a {
     text-decoration: none;
-    color: var(--theme-blue);
+    color: var(--argo-blue);
     transition: color 0.3s ease;
 }
 
 a:hover {
-    color: var(--theme-dark-blue);
+    color: var(--argo-dark-blue);
 }
 
 ul {
@@ -199,7 +199,7 @@ ul {
     text-align: left;
     max-width: 800px;
     margin: 0 auto;
-    color: var(--theme-black);
+    color: var(--argo-black);
 }
 
 /* Project card backgrounds */
@@ -235,7 +235,7 @@ ul {
 }
 
 .project-links a {
-    color: var(--theme-blue);
+    color: var(--argo-blue);
     font-size: 17px;
 }
 
@@ -368,7 +368,7 @@ ul {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 20px;
-    color: var(--theme-blue);
+    color: var(--argo-blue);
 }
 
 .skill-category ul li {
@@ -431,7 +431,7 @@ ul {
 
 .video-caption {
     font-size: 14px;
-    color: var(--theme-gray);
+    color: var(--argo-gray);
     text-align: center;
     margin-top: 10px;
     font-style: italic;
@@ -474,7 +474,7 @@ ul {
 .form-group textarea {
     width: 100%;
     padding: 12px;
-    border: 1px solid var(--theme-light-gray);
+    border: 1px solid var(--argo-light-gray);
     border-radius: 8px;
     font-family: inherit;
     font-size: 16px;
@@ -486,7 +486,7 @@ ul {
 }
 
 .submit-button {
-    background-color: var(--theme-blue);
+    background-color: var(--argo-blue);
     color: white;
     border: none;
     border-radius: 8px;
@@ -499,7 +499,7 @@ ul {
 }
 
 .submit-button:hover {
-    background-color: var(--theme-dark-blue);
+    background-color: var(--argo-dark-blue);
 }
 
 .contact-info {
@@ -519,12 +519,12 @@ ul {
 
 .info-item p {
     font-size: 16px;
-    color: var(--theme-gray);
+    color: var(--argo-gray);
 }
 
 /* Footer */
 .footer {
-    background-color: var(--theme-white);
+    background-color: var(--argo-white);
     padding: 40px 0;
     font-size: 12px;
 }
@@ -540,7 +540,7 @@ ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding-bottom: 20px;
-    border-bottom: 1px solid var(--theme-light-gray);
+    border-bottom: 1px solid var(--argo-light-gray);
     margin-bottom: 20px;
 }
 
@@ -555,18 +555,18 @@ ul {
 }
 
 .footer-column a {
-    color: var(--theme-gray);
+    color: var(--argo-gray);
     transition: color 0.3s ease;
 }
 
 .footer-column a:hover {
-    color: var(--theme-black);
+    color: var(--argo-black);
 }
 
 .footer-bottom {
     display: flex;
     justify-content: space-between;
-    color: var(--theme-gray);
+    color: var(--argo-gray);
 }
 
 /* Media queries */
