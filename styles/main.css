@@ -376,6 +376,76 @@ ul {
     font-size: 17px;
 }
 
+/* Personal section */
+.personal-section {
+    padding: 80px 0;
+    background-color: #f9f9fb;
+}
+
+.text-title-container {
+    margin-bottom: 20px;
+}
+
+.beyond-code-title {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+}
+
+.personal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.personal-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 18px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.personal-video {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.shorts-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: auto; /* Auto height to accommodate caption */
+    margin: 0 auto;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-caption {
+    font-size: 14px;
+    color: var(--apple-gray);
+    text-align: center;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.shorts-container iframe {
+    position: relative;
+    width: 100%;
+    height: 746px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    background-color: var(--apple-black); /* Match background color to reduce visible border */
+}
+
 /* Contact section */
 .contact-section {
     padding: 80px 0;
@@ -562,6 +632,11 @@ ul {
 @media (max-width: 576px) {
     .hero-section h1 {
         font-size: 40px;
+    }
+    
+    .shorts-container iframe {
+        height: 580px; /* Adjusted height on mobile */
+        max-width: 325px;
     }
 
     .hero-section h2 {
