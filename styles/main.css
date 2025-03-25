@@ -634,9 +634,27 @@ ul {
         font-size: 40px;
     }
     
+    /* Make video fill the width of the mobile screen with margins */
     .shorts-container iframe {
-        height: 580px; /* Adjusted height on mobile */
-        max-width: 325px;
+        height: auto;
+        width: calc(100% - 30px) !important; /* Full width minus margins */
+        max-width: none;
+        position: relative;
+        margin: 0 15px; /* 15px margin on each side */
+        border-radius: 12px;
+    }
+    
+    .shorts-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        position: relative;
+    }
+    
+    .personal-video {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
 
     .hero-section h2 {
