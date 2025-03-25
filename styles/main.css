@@ -728,6 +728,10 @@ ul {
     }
 
     /* Work History mobile styles */
+    .work-history-section {
+        padding: 40px 0;
+    }
+    
     .work-item {
         padding: 20px;
     }
@@ -826,7 +830,20 @@ ul {
         padding: 0;
         margin: 0;
     }
+    
+    /* Center Beyond Code text on mobile only */
+    .personal-section {
+        padding: 30px 0;
+    }
+    
+    .text-title-container {
+        text-align: center;
+    }
 
+    .contact-section {
+        padding: 40px 0;
+    }
+    
     .hero-section h2 {
         font-size: 24px;
     }
@@ -844,6 +861,10 @@ ul {
         gap: 15px;
     }
 
+    .skills-section {
+        padding: 40px 0;
+    }
+    
     .skills-grid {
         grid-template-columns: 1fr;
     }
