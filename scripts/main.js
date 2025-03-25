@@ -1,22 +1,5 @@
 // Mobile menu functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Load YouTube API
-    const tag = document.createElement('script');
-    tag.src = 'https://www.youtube.com/iframe_api';
-    const firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    
-    // YouTube player control
-    window.onYouTubeIframeAPIReady = function() {
-        const player = new YT.Player('youtubePlayer', {
-            events: {
-                'onReady': function(event) {
-                    // Set volume to 20% when video is ready
-                    event.target.setVolume(20);
-                }
-            }
-        });
-    };
     const menuButton = document.getElementById('menuButton');
     const mobileMenu = document.getElementById('mobileMenu');
     
