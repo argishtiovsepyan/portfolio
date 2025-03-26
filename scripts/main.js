@@ -49,30 +49,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Animation on scroll
+    // Animation on scroll with performance optimization
+    let ticking = false;
+    let isMobile = window.innerWidth < 768;
+    
+    // Throttled animation on scroll function
     const animateOnScroll = function() {
-        const sections = document.querySelectorAll('section');
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                const sections = document.querySelectorAll('section:not(.hero-section)');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const windowHeight = window.innerHeight;
+                    
+                    if (rect.top < windowHeight * 0.85 && rect.bottom > 0) {
+                        section.style.opacity = 1;
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+                
+                ticking = false;
+            });
+            
+            ticking = true;
+        }
+    };
+    
+    // Initial setup for fade-in animations - simplified for mobile
+    const setupAnimations = () => {
+        const sections = document.querySelectorAll('section:not(.hero-section)');
+        const transitionStyle = isMobile ? 'opacity 0.4s ease' : 'opacity 0.6s ease, transform 0.6s ease';
+        const transformStyle = isMobile ? 'translateY(10px)' : 'translateY(20px)';
         
         sections.forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const sectionBottom = section.getBoundingClientRect().bottom;
-            const windowHeight = window.innerHeight;
-            
-            if (sectionTop < windowHeight * 0.75 && sectionBottom > 0) {
-                section.style.opacity = 1;
-                section.style.transform = 'translateY(0)';
-            }
+            section.style.opacity = 0;
+            if (!isMobile) section.style.transform = transformStyle;
+            section.style.transition = transitionStyle;
         });
     };
     
-    // Initial setup for fade-in animations
-    document.querySelectorAll('section:not(.hero-section)').forEach(section => {
-        section.style.opacity = 0;
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    // Check device on resize
+    window.addEventListener('resize', function() {
+        isMobile = window.innerWidth < 768;
     });
     
-    // Run animation check on load and scroll
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
+    // Run animation setup on load
+    window.addEventListener('load', function() {
+        setupAnimations();
+        animateOnScroll(); // Initial check
+    });
+    
+    // Optimized scroll event
+    window.addEventListener('scroll', animateOnScroll, { passive: true });
 });
