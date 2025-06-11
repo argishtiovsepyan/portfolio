@@ -887,6 +887,11 @@ ul {
         flex-direction: column;
         gap: 10px;
     }
+    
+    .footer-right {
+        justify-content: center;
+        padding-right: 0;
+    }
 }
 
 @media (max-width: 576px) {
@@ -903,14 +908,19 @@ ul {
         gap: 8px;
     }
     
-    /* Make video fill the width of the mobile screen with margins */
+    /* Make video match contact image width on mobile */
     .shorts-container iframe {
         height: auto;
-        width: calc(100% - 30px) !important; /* Full width minus margins */
-        max-width: none;
+        width: 100% !important;
+        max-width: 420px;
         position: relative;
-        margin: 0 15px; /* 15px margin on each side */
+        margin: 0 auto;
         border-radius: 12px;
+    }
+    
+    .shorts-container {
+        max-width: 420px;
+        margin: 0 auto;
     }
     
     .shorts-container {
@@ -937,6 +947,15 @@ ul {
 
     .contact-section {
         padding: 40px 0;
+    }
+    
+    /* Center "Get In Touch" title and button on mobile only */
+    .contact-section h2 {
+        text-align: center;
+    }
+    
+    .submit-button {
+        align-self: center;
     }
     
     .hero-section h2 {
