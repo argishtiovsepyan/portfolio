@@ -76,12 +76,22 @@ ul {
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
     font-weight: 400;
-    transition: color 0.3s ease;
+    transition: all 0.2s ease;
     letter-spacing: -0.01em;
+    padding: 8px 12px;
+    border-radius: 6px;
+    position: relative;
+    display: inline-block;
 }
 
 .desktop-nav a:hover {
     color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.desktop-nav a:active {
+    transform: scale(1.03);
+    background-color: rgba(255, 255, 255, 0.15);
 }
 
 .nav-icon {
@@ -100,9 +110,12 @@ ul {
     position: absolute;
     right: 22px;
     color: #a1a1a6;
-    font-size: 12px;
+    font-size: 28px;
     cursor: pointer;
     display: none;
+    padding: 4px 8px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
 }
 
 .menu-button:hover {
@@ -111,26 +124,41 @@ ul {
 
 .mobile-menu {
     display: none;
-    background-color: black;
-    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 20px 22px 20px 20px;
+    text-align: right;
 }
 
 .mobile-menu ul {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    align-items: flex-end;
 }
 
 .mobile-menu a {
     color: #a1a1a6;
-    font-size: 17px;
+    font-size: 20px;
     display: block;
-    padding: 8px 0;
-    border-bottom: 1px solid #333;
+    padding: 12px 0;
+    border-bottom: 1px solid #666;
+    text-align: right;
+    margin-right: 22px;
+    width: auto;
+    max-width: fit-content;
+    margin-left: auto;
+    display: inline-block;
+    transition: all 0.2s ease;
+    border-radius: 0;
 }
 
 .mobile-menu a:hover {
     color: white;
+}
+
+.mobile-menu a:active {
+    color: white;
+    transform: scale(1.03);
 }
 
 /* Hero section */
@@ -769,15 +797,16 @@ ul {
         display: none;
     }
     
-    /* Position the circular arrow all the way to the left on mobile */
     .nav-container {
-        justify-content: flex-start;
+        justify-content: center;
     }
     
-    .logo-icon {
-        margin-left: 0;
-        position: absolute;
-        left: 22px;
+    .menu-button {
+        display: block;
+    }
+
+    .mobile-menu.active {
+        display: block;
     }
     
     /* All cards stack on mobile */
@@ -789,13 +818,6 @@ ul {
         grid-column: 1;
     }
 
-    .menu-button {
-        display: block;
-    }
-
-    .mobile-menu.active {
-        display: block;
-    }
 
     .grid-container {
         grid-template-columns: 1fr;

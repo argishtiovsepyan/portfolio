@@ -6,7 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     if (menuButton && mobileMenu) {
         menuButton.addEventListener('click', function() {
             mobileMenu.classList.toggle('active');
-            menuButton.textContent = mobileMenu.classList.contains('active') ? 'Close' : 'Menu';
+            if (mobileMenu.classList.contains('active')) {
+                menuButton.textContent = '✕';
+                menuButton.style.fontSize = '16px';
+                menuButton.style.right = '28px';
+            } else {
+                menuButton.textContent = '☰';
+                menuButton.style.fontSize = '28px';
+                menuButton.style.right = '22px';
+            }
         });
     }
     
@@ -23,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     // Close mobile menu if it's open
                     if (mobileMenu && mobileMenu.classList.contains('active')) {
                         mobileMenu.classList.remove('active');
-                        menuButton.textContent = 'Menu';
+                        menuButton.textContent = '☰';
+                        menuButton.style.fontSize = '28px';
+                        menuButton.style.right = '22px';
                     }
                     
                     // Smooth scroll to target
