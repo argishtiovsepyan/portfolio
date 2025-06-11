@@ -365,7 +365,7 @@ ul {
 /* Work History Section */
 .work-history-section {
     padding: 80px 0;
-    background-color: #ffffff;
+    background-color: #f9f9fb;
 }
 
 .section-title-container {
@@ -559,23 +559,84 @@ ul {
     padding: 80px 0;
 }
 
+.contact-title-container {
+    margin-bottom: 20px;
+}
+
 .contact-section h2 {
     font-size: 48px;
     font-weight: 600;
-    text-align: center;
-    margin-bottom: 50px;
+    text-align: left;
+    margin: 0;
 }
 
 .contact-grid {
     display: grid;
     grid-template-columns: 6fr 6fr;
     gap: 40px;
+    align-items: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.alternative-contact {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.alt-contact-text {
+    color: var(--argo-gray);
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.alt-contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.alt-contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--argo-black);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.alt-contact-link:hover {
+    opacity: 0.7;
+    transform: translateY(-2px);
+}
+
+.alt-contact-link i {
+    font-size: 18px;
+}
+
+.contact-picture {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-image {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-group input,
@@ -614,6 +675,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+    margin-bottom: 20px;
 }
 
 .info-item h3 {
@@ -638,7 +700,7 @@ ul {
 }
 
 .footer-container {
-    max-width: 980px;
+    max-width: 1060px;
     margin: 0 auto;
     padding: 0 22px;
 }
@@ -673,8 +735,14 @@ ul {
 
 .footer-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     color: var(--argo-gray);
+}
+
+.footer-bottom p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
 }
 
 /* Media queries */
