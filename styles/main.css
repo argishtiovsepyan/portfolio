@@ -150,15 +150,18 @@ ul {
     display: inline-block;
     transition: all 0.2s ease;
     border-radius: 0;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .mobile-menu a:hover {
     color: white;
+    transform: scale(1.05);
 }
 
 .mobile-menu a:active {
     color: white;
-    transform: scale(1.03);
+    transform: scale(1.05);
 }
 
 /* Hero section */

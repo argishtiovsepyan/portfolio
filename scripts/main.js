@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
-                    // Close mobile menu if it's open
+                    // Close mobile menu if it's open (with small delay to show scale effect)
                     if (mobileMenu && mobileMenu.classList.contains('active')) {
-                        mobileMenu.classList.remove('active');
-                        menuButton.textContent = '☰';
-                        menuButton.style.fontSize = '28px';
-                        menuButton.style.right = '22px';
+                        setTimeout(() => {
+                            mobileMenu.classList.remove('active');
+                            menuButton.textContent = '☰';
+                            menuButton.style.fontSize = '28px';
+                            menuButton.style.right = '22px';
+                        }, 150);
                     }
                     
                     // Smooth scroll to target
@@ -45,6 +47,24 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Add touch scale effect for mobile menu links
+    if (mobileMenu) {
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('touchstart', function() {
+                this.style.transform = 'scale(1.07)';
+                this.style.color = 'white';
+            });
+            
+            link.addEventListener('touchend', function() {
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.color = '';
+                }, 100);
+            });
+        });
+    }
     
     // Add scroll effect to header
     const header = document.querySelector('.header');
