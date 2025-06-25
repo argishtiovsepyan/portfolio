@@ -350,13 +350,6 @@ ul {
     background: url('../images/thumbs/subreddit_classifier.jpg') center/cover no-repeat;
 }
 
-.project-hotdog {
-    background: url('../images/thumbs/hotdog.jpg') center/cover no-repeat;
-}
-
-.project-libre {
-    background: url('../images/thumbs/libre_chatbot.jpg') center/cover no-repeat;
-}
 
 .card-content {
     z-index: 1;
